@@ -1,10 +1,10 @@
 cosmetics new
 
 
-<%= form_for(@cosme) %>
+<%= form_for(@cosme) do |form| %>
   <div class="field">
     <%= form.label :ブランド %>
-    <%= form.text_field :title %>
+    <%= form.text_field :brand_name %>
   </div>
   <div class="field">
   	<%= form.attachment_field :image %>
@@ -12,5 +12,4 @@ cosmetics new
   <div class="actions">
     <%= form.submit "登録する", class:"btn btn-primary" %>
   </div>
-
 <% end %>

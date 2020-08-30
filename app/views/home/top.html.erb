@@ -1,2 +1,20 @@
-<h1>Home#top</h1>
-<p>Find me in app/views/home/top.html.erb</p>
+<div class="container">
+  <div class="row">
+  	<div class="col-12">
+      <div class="main_visual">
+  		
+  	  </div>
+  	</div>
+  </div>
+  <div class="row">
+  	<div class="col-12">
+  	  <% @cosmetics.each do |cosme| %>
+  	    <div class="top_cosme">
+		  	  <div class="top_cosme_items">
+		  	    <%= attachment_image_tag cosme, :image, class:"img-square border", width:"100%", height:"100%" %>
+		  	  </div>
+		  	</div>
+  	  <% end %>
+  	</div>
+  </div>
+</div>
