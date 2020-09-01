@@ -1,10 +1,11 @@
-cosmetics new
-
-
 <%= form_for(@cosme) do |form| %>
   <div class="field">
     <%= form.label :ブランド %>
     <%= form.text_field :brand_name %>
+  </div>
+  <div class="field">
+    <%= form.label :商品名 %>
+    <%= form.text_field :product_name %>
   </div>
   <div class="field">
   	<%= form.attachment_field :image %>

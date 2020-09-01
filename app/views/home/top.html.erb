@@ -2,7 +2,6 @@
   <div class="row">
   	<div class="col-12">
       <div class="main_visual">
-  		
   	  </div>
   	</div>
   </div>
@@ -15,9 +14,11 @@
   	<div class="col-12">
   	  <% @cosmetics.each do |cosme| %>
   	    <div class="top_cosme">
-		  	  <div class="top_cosme_items">
-		  	    <%= attachment_image_tag cosme, :image, class:"img-square border", width:"100%", height:"100%" %>
-		  	  </div>
+          <%= link_to cosmetic_path(cosme) do %>
+  		  	  <div class="top_cosme_items">
+  		  	    <%= attachment_image_tag cosme, :image, class:"img-square border", width:"100%", height:"100%" %>
+  		  	  </div>
+          <% end %>
 		  	</div>
   	  <% end %>
   	</div>

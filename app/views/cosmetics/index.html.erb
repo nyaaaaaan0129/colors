@@ -1,1 +1,20 @@
-cosmetics index
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="top_headline">持っているコスメ一覧</h2>
+    </div>
+  </div>
+  <div class="row">
+  	<div class="col-12">
+  	  <% @cosmetics.each do |cosme| %>
+  	    <div class="top_cosme">
+  	    	<%= link_to cosmetic_path(cosme) do %>
+		  	  <div class="top_cosme_items">
+		  	    <%= attachment_image_tag cosme, :image, class:"img-square border", width:"100%", height:"100%" %>
+		  	  </div>
+		  	<% end %>
+		  	</div>
+  	  <% end %>
+  	</div>
+  </div>
+</div>

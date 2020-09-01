@@ -1,6 +1,7 @@
 class CosmeticsController < ApplicationController
 
   def index
+    @cosmetics = Cosmetic.all
   end
 
   def new
@@ -15,6 +16,11 @@ class CosmeticsController < ApplicationController
   end
 
   def show
+    @cosme = Cosmetic.find(params[:id])
+  end
+
+  def want
+    
   end
 
   def edit
