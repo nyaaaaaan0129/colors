@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_02_094039) do
+ActiveRecord::Schema.define(version: 2020_09_02_174721) do
+
+  create_table "color_genres", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cosme_genres", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "cosmetics", force: :cascade do |t|
     t.integer "user_id"
@@ -25,6 +37,13 @@ ActiveRecord::Schema.define(version: 2020_09_02_094039) do
     t.string "color3"
     t.string "image_id"
     t.string "explanation"
+    t.string "color_genre_id"
+  end
+
+  create_table "genres", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

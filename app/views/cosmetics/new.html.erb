@@ -18,6 +18,14 @@
           <div class="field">
           	<%= form.attachment_field :image %>
           </div>
+          <div class="field">
+            <%= form.label :色① %>
+            <%= form.text_field :color1 %>
+          </div>
+          <div class="field">
+            <%= form.label :色② %>
+            <%= form.text_field :color2 %>
+          </div>
           <div class="actions">
             <%= form.submit "登録する", class:"btn btn-primary" %>
           </div>
