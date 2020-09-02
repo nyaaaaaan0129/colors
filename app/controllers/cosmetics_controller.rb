@@ -19,10 +19,6 @@ class CosmeticsController < ApplicationController
     @cosme = Cosmetic.find(params[:id])
   end
 
-  def want
-    
-  end
-
   def edit
   end
 

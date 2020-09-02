@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_30_072126) do
+ActiveRecord::Schema.define(version: 2020_09_02_094039) do
 
   create_table "cosmetics", force: :cascade do |t|
     t.integer "user_id"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2020_08_30_072126) do
     t.datetime "updated_at", null: false
     t.string "color3"
     t.string "image_id"
+    t.string "explanation"
   end
 
   create_table "users", force: :cascade do |t|
@@ -37,6 +38,15 @@ ActiveRecord::Schema.define(version: 2020_08_30_072126) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "wants", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "brand_name"
+    t.string "product_name"
+    t.string "explanation"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
