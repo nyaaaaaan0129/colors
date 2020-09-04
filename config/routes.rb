@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   resources :cosmetics
   resources :users
   resources :wants
+  resources :genres
+  resources :color_genres
 end

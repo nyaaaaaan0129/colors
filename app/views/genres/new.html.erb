@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <h2 class="cosmetic_new_header">
+        新しい化粧品ジャンルを登録する
+      </h2>
+      <div class="cosmetic_new_form">
+        <%= form_for(@genre) do |form| %>
+          <div class="field">
+            <%= form.label :ジャンル名 %>
+            <%= form.text_field :name %>
+          </div>
+          <div class="actions">
+            <%= form.submit "登録する", class:"btn btn-primary" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-2"></div>
+  </div>
+</div>
