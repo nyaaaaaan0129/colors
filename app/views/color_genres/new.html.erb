@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <h2 class="cosmetic_new_header">
+        新しい化粧品ジャンルを登録する
+      </h2>
+      <div class="cosmetic_new_form">
+        <%= form_for(@color_genre) do |form| %>
+          <div class="field">
+            <%= form.label :ジャンル名 %>
+            <%= form.text_field :name %>
+          </div>
+          <div class="actions">
+            <%= form.submit "登録する", class:"btn btn-primary" %>
+          </div>
+        <% end %>
+      </div>
+      <div class="color_genre_index">
+        <table class="table">
+          <tbody>
+            <tr>
+              <th>色ジャンルid</th>
+              <th>色ジャンル名</th>
+            </tr>
+            <% @color_genres.each do |color_genre| %>
+            <tr>
+              <td><%= color_genre.id %></td>
+              <td><%= color_genre.name %></td>
+            </tr>
+              <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-2"></div>
+  </div>
+</div>
