@@ -22,9 +22,15 @@ class CosmeticsController < ApplicationController
   end
 
   def edit
+    @cosme = Cosmetic.find(params[:id])
+    @color_genres = ColorGenre.all
+    @genres = Genre.all
   end
 
   def update
+    @cosme = Cosmetic.find(params[:id])
+    @cosme.update(cosmetic_params)
+    redirect_to cosmetic_path
   end
 
   def destroy
