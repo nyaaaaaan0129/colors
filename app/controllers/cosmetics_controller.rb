@@ -6,6 +6,8 @@ class CosmeticsController < ApplicationController
 
   def new
     @cosme = Cosmetic.new
+    @color_genres = ColorGenre.all
+    @genres = Genre.all
   end
 
   def create

@@ -6,12 +6,6 @@
         新しい化粧品を登録する
       </h2>
       <div class="new_cosmetic_links">
-        <div class="new_cosme_genre_link">
-          <%= link_to "化粧品ジャンルを増やす", new_genre_path, class:"btn btn-success" %>
-        </div>
-        <div class="new_color_genre_link">
-          <%= link_to "色ジャンルを増やす", new_color_genre_path, class:"btn btn-success" %>
-        </div>
       </div>
       <div class="cosmetic_new_form">
         <%= form_for(@cosme) do |form| %>
@@ -24,7 +18,24 @@
             <%= form.text_field :product_name %>
           </div>
           <div class="field">
+            <div id="preview_image">
+              <%= image_tag "no_image.jpg", size:"300x300", id:"preview_image" %>
+            </div>
           	<%= form.attachment_field :image %>
+          </div>
+          <div class="field">
+            <%= form.label :化粧品ジャンル %>
+            <%= form.collection_select :genre_id, Genre.all, :id, :name %>
+            <div class="new_cosme_genre_link">
+              <%= link_to "化粧品ジャンルを増やす", new_genre_path, class:"btn btn-success" %>
+            </div>
+          </div>
+          <div class="field">
+            <%= form.label :色ジャンル %>
+            <%= form.collection_select :color_genre_id, ColorGenre.all, :id, :name %>
+            <div class="new_color_genre_link">
+              <%= link_to "色ジャンルを増やす", new_color_genre_path, class:"btn btn-success" %>
+            </div>
           </div>
           <div class="field">
             <%= form.label :色① %>
