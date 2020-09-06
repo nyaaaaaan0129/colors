@@ -33,6 +33,6 @@ class CosmeticsController < ApplicationController
   private
 
   def cosmetic_params
-    params.require(:cosmetic).permit(:user_id, :genre_id, :brand_name, :product_name, :color1, :color2, :color3, :color4, :image)
+    params.require(:cosmetic).permit(:user_id, :color_genre_id, :genre_id, :brand_name, :product_name, :color1, :color2, :color3, :color4, :image)
   end
 end
