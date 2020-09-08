@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_02_174721) do
+ActiveRecord::Schema.define(version: 2020_09_08_135201) do
+
+  create_table "brands", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "color_genres", force: :cascade do |t|
     t.string "name"
@@ -27,7 +33,6 @@ ActiveRecord::Schema.define(version: 2020_09_02_174721) do
   create_table "cosmetics", force: :cascade do |t|
     t.integer "user_id"
     t.integer "genre_id"
-    t.string "brand_name"
     t.string "product_name"
     t.string "color1"
     t.string "color2"
@@ -38,6 +43,7 @@ ActiveRecord::Schema.define(version: 2020_09_02_174721) do
     t.string "image_id"
     t.string "explanation"
     t.string "color_genre_id"
+    t.integer "brand_id"
   end
 
   create_table "genres", force: :cascade do |t|

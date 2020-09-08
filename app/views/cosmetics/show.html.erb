@@ -3,7 +3,13 @@
 		<div class="col-2"></div>
 		<div class="col-8">
 			<h2 class="show_cosmetic_header"><%= @cosme.product_name %></h2>
-			<%= attachment_image_tag @cosme, :image, class:"img-square border", size:"300x300", fallback:"no_image.jpg" %>
+			<div class="show_cosmetic_image">
+				<%= attachment_image_tag @cosme, :image, class:"img-square border", size:"300x300", fallback:"no_image.jpg" %>
+		    </div>
+		    <div class="show_cosmetic_text">
+		    	<%= @cosme.brand_name %>
+		    	<%= @cosme.product_name %>
+		    </div>
 		</div>
         <div class="col-2"></div>
 	</div>

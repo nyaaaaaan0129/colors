@@ -18,6 +18,7 @@
 
 
 
+
 footer {
 	width: 100%;
 	height: 50px;
@@ -29,6 +30,8 @@ footer {
 	overflow:hidden;
 	min-height:100vh;
 }
+
+/*top/homeここから*/
 
 .main_visual {
 	width: 100%;
@@ -66,6 +69,8 @@ top_cosme_items_text {
 	background-color: #FFCCCC;
 }
 
+/*top/homeここまで*/
+
 /* new/cosmetics */
 
 .new_cosmetic_links {
@@ -94,3 +99,18 @@ top_cosme_items_text {
 
 /* new/cosmeticsここまで */
 
+.show_cosmetic_header {
+
+}
+
+.show_cosmetic_image {
+	width: 50%;
+}
+
+.show_cosmetic_text {
+	width: 50%;
+}
+
+/* show/cosmeticsここから*/
+
+/* show/cosmeticsここまで*/
