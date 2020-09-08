@@ -1,6 +1,7 @@
 class BrandsController < ApplicationController
   def new
     @brand = Brand.new
+    @brands = Brand.all
   end
 
   def create

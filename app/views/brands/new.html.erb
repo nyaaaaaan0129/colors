@@ -1,2 +1,38 @@
-<h1>Brands#new</h1>
-<p>Find me in app/views/brands/new.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <h2 class="cosmetic_new_header">
+        新しいブランドを登録する
+      </h2>
+      <div class="cosmetic_new_form">
+        <%= form_for(@brand) do |form| %>
+          <div class="field">
+            <%= form.label :ブランド名 %>
+            <%= form.text_field :name %>
+          </div>
+          <div class="actions">
+            <%= form.submit "登録する", class:"btn btn-primary" %>
+          </div>
+        <% end %>
+      </div>
+      <div class="color_genre_index">
+        <table class="table">
+          <tbody>
+            <tr>
+              <th>ブランドid</th>
+              <th>ブランド名</th>
+            </tr>
+            <% @brands.each do |brand| %>
+            <tr>
+              <td><%= brand.id %></td>
+              <td><%= brand.name %></td>
+            </tr>
+              <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-2"></div>
+  </div>
+</div>
