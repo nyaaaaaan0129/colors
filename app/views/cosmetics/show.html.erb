@@ -1,16 +1,21 @@
 <div class="container">
 	<div class="row">
-		<div class="col-2"></div>
-		<div class="col-8">
+		<div class="col-1"></div>
+		<div class="col-10">
 			<h2 class="show_cosmetic_header"><%= @cosme.product_name %></h2>
 			<div class="show_cosmetic_image">
 				<%= attachment_image_tag @cosme, :image, class:"img-square border", size:"300x300", fallback:"no_image.jpg" %>
 		    </div>
 		    <div class="show_cosmetic_text">
-		    	<%= @cosme.brand.name %>
-		    	<%= @cosme.product_name %>
+		    	<h4>ブランド名：<%= @cosme.brand.name %></h4>
+		    	<h4>製品名：<%= @cosme.product_name %></h4>
+		    	<h5>色ジャンル：<%= @cosme.color_genre.name %></h5>
+		    	<h5>色名１<%= @cosme.color1 %></h5>
+		    	<h5>色名２<%= @cosme.color2 %></h5>
+		    	<h5>色名３<%= @cosme.color3 %></h5>
+		    	<h5>色名４<%= @cosme.color4 %></h5>
 		    </div>
 		</div>
-        <div class="col-2"></div>
+        <div class="col-1"></div>
 	</div>
 </div>
