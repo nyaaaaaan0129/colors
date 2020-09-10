@@ -7,13 +7,38 @@
 				<%= attachment_image_tag @cosme, :image, class:"img-square border", size:"300x300", fallback:"no_image.jpg" %>
 		    </div>
 		    <div class="show_cosmetic_text">
-		    	<h4>ブランド名：<%= @cosme.brand.name %></h4>
-		    	<h4>製品名：<%= @cosme.product_name %></h4>
-		    	<h5>色ジャンル：<%= @cosme.color_genre.name %></h5>
-		    	<h5>色名１<%= @cosme.color1 %></h5>
-		    	<h5>色名２<%= @cosme.color2 %></h5>
-		    	<h5>色名３<%= @cosme.color3 %></h5>
-		    	<h5>色名４<%= @cosme.color4 %></h5>
+		      <table class="table">
+		      	<tbody>
+		      	  <tr>
+		      		<th>ブランド名</th>
+			    	<td><%= @cosme.brand.name %></td>
+			      </tr>
+			      <tr>
+			        <th>製品名</th>
+			    	<td><%= @cosme.product_name %></td>
+			      </tr>
+			      <tr>
+			      	<th>色ジャンル</th>
+			    	<td><%= @cosme.color_genre.name %></td>
+			      </tr>
+			      <tr>
+			      	<th>色１</th>
+			    	<td><%= @cosme.color1 %></td>
+			      </tr>
+			      <tr>
+			      	<th>色２</th>
+			    	<td><%= @cosme.color2 %></td>
+			      </tr>
+			      <tr>
+			      	<th>色３</th>
+			    	<td><%= @cosme.color3 %></td>
+			      </tr>
+			      <tr>
+			      	<th>色４</th>
+			    	<td><%= @cosme.color4 %></td>
+			      </tr>
+		        </tbody>
+		      </table>
 		    </div>
 		</div>
         <div class="col-1"></div>
