@@ -17,6 +17,9 @@
 @import "bootstrap";
 
 
+img {
+	object-fit:cover;
+}
 
 
 footer {
@@ -79,7 +82,6 @@ top_cosme_items_text {
 }
 
 
-
 .new_cosme_genre_link {
 	
 }
@@ -100,7 +102,9 @@ top_cosme_items_text {
 /* new/cosmeticsここまで */
 
 .show_cosmetic_header {
-
+text-align:center;
+margin-top:50px;
+margin-bottom:50px;
 }
 
 .show_cosmetic_image {

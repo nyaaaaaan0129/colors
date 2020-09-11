@@ -2,10 +2,10 @@
 	<div class="row">
 		<div class="col-1"></div>
 		<div class="col-10">
-			<h1 class="show_cosmetic_header">持っているコスメ</h1>
-			<h2 class="show_cosmetic_header"><%= @cosme.product_name %></h2>
+			<h1 class="show_cosmetic_header">欲しいコスメ</h1>
+			<h2 class="show_cosmetic_header"><%= @want.product_name %></h2>
 			<div class="show_cosmetic_image">
-				<%= attachment_image_tag @cosme, :image, class:"img-square border", size:"300x300", fallback:"no_image.jpg" %>
+				<%= attachment_image_tag @want, :image, class:"img-square border", size:"300x300", fallback:"no_image.jpg" %>
 		    </div>
 		    <div class="show_cosmetic_text">
 		      <table class="table">
