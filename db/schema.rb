@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_11_144245) do
+ActiveRecord::Schema.define(version: 2020_09_13_142256) do
 
   create_table "brands", force: :cascade do |t|
     t.string "name"
@@ -74,6 +74,11 @@ ActiveRecord::Schema.define(version: 2020_09_11_144245) do
     t.integer "brand_id"
     t.integer "genre_id"
     t.integer "color_genre_id"
+    t.string "image_id"
+    t.string "color1"
+    t.string "color2"
+    t.string "color3"
+    t.string "color4"
   end
 
 end

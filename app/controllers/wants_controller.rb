@@ -9,11 +9,19 @@ class WantsController < ApplicationController
   end
 
   def new
+    @want = Want.new
+  end
+
+  def create
+    @want = Want.new(want_params)
+    @want.user_id = current_user.id
+    @want.save!
+    redirect_to wants_path
   end
 
   private
 
   def want_params
-  	params.require(:want).permit(:user_id, :brand_id, :genre_id, :color_genre_id, :product_name, :explanation)
+  	params.require(:want).permit(:user_id, :image, :brand_id, :genre_id, :color_genre_id, :product_name, :color1, :color2, :color3, :color4, :explanation)
   end
 end
