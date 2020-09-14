@@ -82,14 +82,6 @@ top_cosme_items_text {
 }
 
 
-.new_cosme_genre_link {
-	
-}
-
-.new_color_genre_link {
-	
-}
-
 
 .cosmetic_new_header {
 	text-align: center;
@@ -100,6 +92,25 @@ top_cosme_items_text {
 }
 
 /* new/cosmeticsここまで */
+
+
+/* index/cosmeticsここから*/
+
+.cosme_genre {
+	text-align: center;
+}
+
+.cosme_genre_links {
+    width: 60%;
+    height: 100px;
+	border: 1px solid;
+	margin: 20px auto;
+}
+
+/* index/cosmeticsここまで*/
+
+
+/* show/cosmeticsここから*/
 
 .show_cosmetic_header {
 text-align:center;
@@ -117,7 +128,7 @@ margin-bottom:50px;
 	float: right;
 }
 
-/* show/cosmeticsここから*/
+
 
 /* show/cosmeticsここまで*/
 
