@@ -1,8 +1,12 @@
 class CosmeticsController < ApplicationController
 
   def index
-    @cosmetics = Cosmetic.all
-    @genres = Genre.pluck(:name)
+    if params[:key] >= "1"
+      @cosmetics = Cosmetic.where(genre_id: params[:key])
+    else
+      @cosmetics = Cosmetic.all
+    end
+    @genres = Genre.pluck(:id, :name)
   end
 
   def new

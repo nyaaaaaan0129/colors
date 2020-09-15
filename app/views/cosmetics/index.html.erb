@@ -15,8 +15,8 @@
         <div class="cosme_genre_links">
           <% @genres.each do |genre| %>
               <div class="cosme_genre_link">
-                <%= link_to cosmetics_path do %>
-                  <%= genre %>
+                <%= link_to cosmetics_path(key:genre[0]) do %>
+                  <%= genre[1] %>
                 <% end %>
               </div>
           <% end %>
