@@ -2,6 +2,7 @@ class CosmeticsController < ApplicationController
 
   def index
     @cosmetics = Cosmetic.all
+    @genres = Genre.pluck(:name)
   end
 
   def new

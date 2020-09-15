@@ -96,15 +96,28 @@ top_cosme_items_text {
 
 /* index/cosmeticsここから*/
 
+
 .cosme_genre {
 	text-align: center;
 }
 
 .cosme_genre_links {
     width: 60%;
-    height: 100px;
-	border: 1px solid;
 	margin: 20px auto;
+}
+
+
+.cosme_genre_link {
+	float: left;
+	margin: 10px 10px;
+	padding-left: 10px;
+}
+
+.border_bar {
+	height:5px;
+	width:80%;
+	background-color:orange;
+    margin: 30px auto;
 }
 
 /* index/cosmeticsここまで*/

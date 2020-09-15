@@ -3,10 +3,29 @@
     <div class="col-12">
       <h2 class="top_headline">持っているコスメ一覧</h2>
     </div>
+  </div>
+  <div class="row">
     <div class="col-12">
-      <h4 class="cosme_genre">ジャンルからコスメを絞る</h4>
-      <div class="cosme_genre_links"></div>
-
+      <div class="border_bar"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+        <h4 class="cosme_genre">ジャンルからコスメを絞る</h4>
+        <div class="cosme_genre_links">
+          <% @genres.each do |genre| %>
+              <div class="cosme_genre_link">
+                <%= link_to cosmetics_path do %>
+                  <%= genre %>
+                <% end %>
+              </div>
+          <% end %>
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="border_bar"></div>
     </div>
   </div>
   <div class="row">
