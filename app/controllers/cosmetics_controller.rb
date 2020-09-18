@@ -40,6 +40,9 @@ class CosmeticsController < ApplicationController
   end
 
   def destroy
+    @post = Cosmetic.find(params[:id])
+    @post.destroy
+    redirect_to cosmetics_path(key:0)
   end
 
   private
