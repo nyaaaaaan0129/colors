@@ -1,5 +1,6 @@
 class CosmeticsController < ApplicationController
 
+
   def index
     if params[:key] >= "1"
       @cosmetics = Cosmetic.where(genre_id: params[:key])
@@ -43,6 +44,11 @@ class CosmeticsController < ApplicationController
     @post = Cosmetic.find(params[:id])
     @post.destroy
     redirect_to cosmetics_path(key:0)
+  end
+
+  def expired
+    expired = Date.toda - 1.years
+    @cosmetics = Cosmetic.where(created_at: < expired)
   end
 
   private
