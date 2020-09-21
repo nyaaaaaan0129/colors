@@ -47,8 +47,7 @@ class CosmeticsController < ApplicationController
   end
 
   def expired
-    expired = Date.toda - 1.years
-    @cosmetics = Cosmetic.where(created_at: < expired)
+    @cosmetics = Cosmetic.where.not(created_at: (1.years.ago)..(Time.now))
   end
 
   private
