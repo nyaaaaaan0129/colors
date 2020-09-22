@@ -19,6 +19,16 @@ class WantsController < ApplicationController
     redirect_to wants_path
   end
 
+  def edit
+    @want = Want.find(params[:id])
+  end
+
+  def update
+    @want = Want.find(params[:id])
+    @want.update(want_params)
+    redirect_to want_path(@want)
+  end
+
   def destroy
     @want = Want.find(params[:id])
     @want.destroy

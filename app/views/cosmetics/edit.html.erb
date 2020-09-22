@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <h2 class="cosmetic_new_header">
+        持っている化粧品を編集する
+      </h2>
+      <div class="cosmetic_new_form">
+        <%= form_for(@cosme) do |form| %>
+          <div class="field">
+            <%= form.label :ブランド %>
+            <%= form.collection_select :brand_id, Brand.all, :id, :name %>
+            <div class="new_cosme_genre_link">
+              <%= link_to "ブランドを増やす", new_brand_path, class:"btn btn-success" %>
+            </div>
+          </div>
+          <div class="field">
+            <%= form.label :商品名 %>
+            <%= form.text_field :product_name %>
+          </div>
+          <div class="field">
+            <div class="preview_image">
+              <%= attachment_image_tag @cosme, :image, size:"300x300", id:"preview_image3" %>
+            </div>
+          	<%= form.attachment_field :image %>
+          </div>
+
+          <div class="field">
+            <%= form.label :化粧品ジャンル %>
+            <%= form.collection_select :genre_id, Genre.all, :id, :name %>
+            <div class="new_cosme_genre_link">
+              <%= link_to "化粧品ジャンルを増やす", new_genre_path, class:"btn btn-success" %>
+            </div>
+          </div>
+          <div class="field">
+            <%= form.label :色ジャンル %>
+            <%= form.collection_select :color_genre_id, ColorGenre.all, :id, :name %>
+            <div class="new_color_genre_link">
+              <%= link_to "色ジャンルを増やす", new_color_genre_path, class:"btn btn-success" %>
+            </div>
+          </div>
+          <div class="field">
+            <%= form.label :色① %>
+            <%= form.text_field :color1 %>
+          </div>
+          <div class="field">
+            <%= form.label :色② %>
+            <%= form.text_field :color2 %>
+          </div>
+          <div class="actions">
+            <%= form.submit "登録する", class:"btn btn-primary" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-2"></div>
+  </div>
+</div>

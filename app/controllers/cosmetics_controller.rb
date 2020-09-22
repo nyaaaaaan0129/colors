@@ -32,6 +32,7 @@ class CosmeticsController < ApplicationController
     @cosme = Cosmetic.find(params[:id])
     @color_genres = ColorGenre.all
     @genres = Genre.all
+    @brands = Brand.all
   end
 
   def update
