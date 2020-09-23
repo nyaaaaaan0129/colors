@@ -1,4 +1,6 @@
 class ColorGenresController < ApplicationController
+	before_action :authenticate_user!
+	
 	def new
 		@color_genre = ColorGenre.new
 		@color_genres = ColorGenre.all
