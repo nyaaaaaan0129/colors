@@ -19,38 +19,14 @@
 //= require bootstrap-sprockets
 
 
-$(function(){
-    $('#cosmetic_image').on('change', function (e) {
-    var reader = new FileReader();
-    reader.onload = function (e) {
-        $("#preview_image").attr('src', e.target.result);
-    }
-    reader.readAsDataURL(e.target.files[0]);
-});
-});
+
+
+
+
+
 
 $(function(){
     $('#want_image').on('change', function (e) {
-    var reader = new FileReader();
-    reader.onload = function (e) {
-        $("#preview_image2").attr('src', e.target.result);
-    }
-    reader.readAsDataURL(e.target.files[0]);
-});
-});
-
-$(function(){
-    $('#cosmetic_image').on('change', function (e) {
-    var reader = new FileReader();
-    reader.onload = function (e) {
-        $("#preview_image3").attr('src', e.target.result);
-    }
-    reader.readAsDataURL(e.target.files[0]);
-});
-});
-
-$(function(){
-    $('#cosmetic_image').on('change', function (e) {
     var reader = new FileReader();
     reader.onload = function (e) {
         $("#preview_image4").attr('src', e.target.result);
